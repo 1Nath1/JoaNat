@@ -1,381 +1,408 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Biuro rachunkowe oferujące kompleksową obsługę księgową: prowadzenie ksiąg handlowych, księgi przychodów i rozchodów, ewidencja przychodów, ewidencja VAT, oraz obsługę kadrowo-płacową. joanat">
-    <title>JoaNat - Biuro Rachunkowe</title>
-    <link rel="icon" href="logoJ.ico" type="image/x-icon">
-    <style>
-        body{
-            background-color: rgb(41, 60, 77);
-            background-image: url(BGz.jpg);
-            background-size: cover;
-            }
-        #header{
-            width: 100%;
-            height: 80px;
-            position: absolute;
-            background-color: rgba(0, 0, 0, 0.205);
-            left: 0px;
-            top: 0px;
-        }
-        #obrazMain{
-            background-image: url(obrazMain.jpg);
-            width: 100%;
-            height: 50%;
-            position: absolute;
-            background-size: cover;
-            background-position: 0px;
-            top: 0px;
-            left: 0px;
-        }
-        #obrazBlur{
-            width: 100%;
-            position: absolute;
-            left: 0px;
-            top: 0px;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.39);
-            filter: blur(10px);
-        }
-        #linearB{
-            top: 50%;
-            height: 100px;
-            width: 100%;
-            position: absolute;
-            left: 0px;
-            background-color: rgb(26, 26, 26);
-        }
-        #Main{
-            background-color: rgba(41, 60, 77, 0.95);
-            width: 100%;
-            height: 280%;
-            position: absolute;
-            left: 0px;
-            top: 60%;
-        }
-        .tekst{
-            position: absolute;
-            font-family: 'Montserrat', sans-serif;
-            font-weight: 100;
-            letter-spacing: 2px;
-        }
-        .tekst{
-            color: rgb(192, 192, 192);
-            top: 10%;
-        }
-        #nazwaM{
-            left: 41%;
-            top: -60%;
-            background-size: contain;
-            width: 300px;
-        }
-        #nazwaM2{
-            left: 42.3%;
-            top: -2%;
-            background-size: contain;
-            width: 200px;
-        }
-        #numerM{
-            left: 25%;
-            font-size: 110%;
-        }
-        #emailM{
-            left: 10%;
-            font-size: 110%;
-        }
-        #adresM{
-            left: 64%;
-            font-size: 110%;
-        }
-        #biuroM{
-            left: 42%;
-            font-size: 130%;
-        }
-        #uslugiM{
-            left: 45%;
-            font-size: 200%;
-            top: 7%;
-            letter-spacing: 4px;
-        }
-        #wspolpracaM{
-            left: 45%;
-            font-size: 200%;
-            top: 55%;
-            letter-spacing: 4px;
-        
-        }
-        #kontaktM2{
-            left: 45%;
-            font-size: 200%;
-            top: 80.5%;
-            letter-spacing: 4px;
-        }
-        #k1,#k2,#k3,#k4,#k5,#k6,#k7,#k8{
-            position: absolute;
-            width: 35%;
-            height: 3px;
-            background-color: rgb(41, 60, 77);
-            border: 0;
-        }
-        #k1{
-            left: 5%;
-            top: 60%;
-        }
-        #k2{
-            left: 58%;
-            top: 60%;
-        }
-        #k3{
-            background-color: rgb(192, 192, 192);
-            left: 31%;
-            top: 90%;
-        }
-        #k4{
-            background-color: rgb(192, 192, 192);
-            left: 31%;
-            top: -1%;
-        }
-        #k5{
-            background-color: rgb(192, 192, 192);
-            left: 15%;
-            top: 10.5%;
-            width: 70%;
-        }
-        #k6{
-            background-color: rgb(192, 192, 192);
-            left: 15%;
-            top: 41%;
-            width: 70%;
-        }
-        #k7{
-            background-color: rgb(192, 192, 192);
-            left: 15%;
-            top: 58.5%;
-            width: 70%;
-        }
-        #k8{
-            background-color: rgb(192, 192, 192);
-            left: 15%;
-            top: 84%;
-            width: 70%;
-        }
-        .karta{
-            position: absolute;
-            width: 30%;
-            height: 1000px;
-            background-color: rgba(26, 26, 26);
-        }
-        #karta1{
-            top: 11.5%;
-            left: 10%;
-            right: 10%;
-            width: 80%;
-            height: 1150px;
-            background-color: rgba(26, 26, 26, 0.822);
-        }
-        #karta2{
-            top: 56.7%;
-            left: 10%;
-            right: 10%;
-            width: 80%;
-            height: 500px;
-            background-color: rgba(255, 255, 255, 0.705);
-        }
-        #karta3{
-            top: 84.7%;
-            left: 10%;
-            right: 10%;
-            width: 80%;
-            height: 500px;
-        }
-        .kartaHeader{
-            background-color: aliceblue;
-            position: absolute;
-            top: 0px;
-            left: 0px;
-            width: 100%;
-            height: 20%;
-        }
-        .chainImg{
-            position: absolute;
-            width: 100%;
-            background-repeat: repeat;
-            opacity: 0.6;
-        }
-        .kartyUslug{
-            position: absolute;
-            width: 25%;
-            height: 400px;
-            background-color: rgb(41, 41, 41);
-            text-align: center;
-            align-items: center;
-        }
-        #kh,#kpir,#ep{
-            top: 5%;
-        }
-        #kh{
-            left: 7%;
-        }
-        #kpir{
-            left: 36%;
-        }
-        #ep{
-            left: 65%;
-        }
-        #ev,#okp{
-            top: 44%;
-        }
-        #ev{
-            left: 22%;
-        }
-        #okp{
-            left: 51%;
-        }
-        #pdpe{
-            left: 7%;
-            top: 15%;
-        }
-        #zpnskk{
-            left: 36%;
-            top: 15%;
-        }
-        #tpzprmhdpk{
-            left: 65%;
-            top: 15%;
-        }
-        #nt{
-            left: 7%;
-            top: 10%;
-        }
-        #mp{
-            left: 36%;
-            top: 10%;
-        }
-        #pt{
-            left: 65%;
-            top: 10%;
-        }
-        #tytul{
-            position: relative;
-            font-size: 160%;
-            color: white;
-            top: 3%;
-        }
-        #tresc{
-            position: relative;
-            font-size: large;
-        }
-        #tresc>b{
-            letter-spacing: 1px;
-            font-size: 110%;
-            color: white;
-            display: inline-block;
-            margin-bottom: 5px;
-        }
-        #tresc{
-            line-height: 1.4;
-        }
-    </style>
+    <title>Biuro Rachunkowe Joanat | Biała Podlaska | Księgowość, Podatki, Kadry</title>
+    <meta name="description" content="Biuro Rachunkowe Joanat w Białej Podlaskiej oferuje kompleksową obsługę księgową, podatkową i kadrową dla firm. Skontaktuj się z nami już dziś!">
+    <meta name="keywords" content="Biuro rachunkowe, księgowość, podatki, kadry, Biała Podlaska, obsługa księgowa, usługi księgowe, doradztwo podatkowe">
+    <meta name="author" content="Biuro Rachunkowe Joanat">
+    <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
 
-    <div id="linearB"><h1 class="tekst" id="biuroM">Biuro Rachunkowe</h1></div>
-    <div id="obrazMain">
-        <div id="obrazBlur"></div>
-    </div>    
-    <div id="header">
-        <img class="tekst" src="JoaNatLogo1.png" id="nazwaM">
-        <h4 class="tekst" id="numerM">+48 602588440</h4>
-        <h4 class="tekst" id="emailM">br.joanat@gmail.com</h4>
-        <h4 class="tekst" id="adresM">21-500 Biała Podlaska ul. Wesoła 7a</h4>
-        <hr id="k1">
-        <hr id="k2">
-        <hr id="k3">
+<script src="https://unpkg.com/lucide@latest"></script>
+
+<body class="bg-slate-100">
+    <header class="bg-[#0D2B45] border-b-4 border-[#DCC8AA] shadow-lg">
+
+        <div class="bg-[#081C2C] text-white text-sm">
+            <div class="max-w-7xl mx-auto px-6md:px-8 py-1 md:py-2 flex flex-col md:flex-row justify-between items-center gap-2 md:gap-6 text-[#FFF8E7]" 
+                style="font-family: 'Cormorant Garamond', serif;">
+
+                <p class="flex items-center gap-2">
+                    <i data-lucide="map-pin" class="w-4 h-4"></i>
+                    ul. Wesoła 7A, Biała Podlaska
+                </p>
+
+                <div class="flex gap-8">
+
+                    <p class="flex items-center gap-2">
+                        <i data-lucide="phone" class="w-4 h-4"></i>
+                        +48 602 588 440
+                    </p>
+
+                    <p class="flex items-center gap-2">
+                        <i data-lucide="mail" class="w-4 h-4"></i>
+                        br.joanat@gmail.com
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    <div class="relative max-w-7xl mx-auto px-6 py-10 flex justify-between items-start gap-6">
+
+    
+        
+        <!-- Lewa strona headera -->
+        <div>
+            <h1 class="text-4xl font-bold tracking-[0.18em] bg-gradient-to-r from-[#FFF8E7] to-[#DCC8AA] bg-clip-text text-transparent  drop-shadow-[0_4px_6px_rgba(0,0,0,0.35)]"
+            style="font-family: 'Cormorant Garamond', serif;">
+                JOANAT  
+            </h1>
+
+            <p class="uppercase tracking-[0.30em] text-xs bg-gradient-to-r from-[#FFF8E7] to-[#DCC8AA] bg-clip-text text-transparent">
+                Biuro rachunkowe
+            </p>
+        </div>
+
+        <!-- Prawa strona headera -->
+        
+        <div>
+            
+            <nav class="hidden md:flex items-center gap-10 text-[#FFF8E7] text-lg uppercase tracking-[0.12em]">
+
+
+                            <!--Linki nawigacyjne-->
+                <a href="#start" class="hover:text-[#DCC8AA] transition">
+                    Start
+                </a>
+
+                <a href="#uslugi" class="hover:text-[#DCC8AA] transition">
+                    Usługi
+                </a>
+
+                <a href="#wspolpraca" class="hover:text-[#DCC8AA] transition">
+                    Współpraca
+                </a>
+
+                <a href="#kontakt" class="hover:text-[#DCC8AA] transition">
+                    Kontakt
+                </a>
+
+            </nav>
+
+                <div class="md:hidden relative mr-16">
+                <!--menu dla urzadzen mobilnych-->
+                <div id="mobile-menu" class="absolute left-1/2 -translate-x-1/2 top-full bg-[#081C2C] rounded-xl shadow-lg p-6 w-48 opacity-0 -translate-y-4 pointer-events-none transition-all duration-300">
+
+                    <a href="#start" class="block py-2 text-[#FFF8E7] text-base uppercase tracking-[0.15em]" >
+                        Start
+                    </a>
+
+                    <a href="#uslugi" class="block py-2 text-[#FFF8E7] text-base uppercase tracking-[0.15em]" >
+                        Usługi
+                    </a>
+
+                    <a href="#wspolpraca" class="block py-2 text-[#FFF8E7] text-base uppercase tracking-[0.15em]" >
+                        Współpraca
+                    </a>
+
+                    <a href="#kontakt" class="block py-2 text-[#FFF8E7] text-base uppercase tracking-[0.15em]">
+                        Kontakt
+                    </a>
+
+                </div>
+
+
+
+                <!-- Przycisk menu dla urządzeń mobilnych -->
+                <button id = "menu-button" class="text-[#FFF8E7] text-3xl">
+                    ☰
+                </button>
+            </div>
+        </div>
+
     </div>
-    <div id="Main"><hr id="k4">
-        <img src="chainBg2.png" style="top: 2%;" class="chainImg">
-        <img class="tekst" src="JoaNatLogo1.png" id="nazwaM2">
-        <h4 class="tekst" id="uslugiM">Usługi</h4>
-        <hr id="k5">
-        <div class="karta" id="karta1">
-            <div id="kh" class="kartyUslug">
-                <h2 class="tekst" id="tytul">ksiąg handlowych</h2>
-                <h4 class="tekst" id="tresc"><b>Pełna księgowość dla firm</b>,<br> obejmująca <br> ewidencję operacji finansowych,<br> sporządzanie bilansów,<br> rachunków zysków i strat <br> oraz <br> deklaracji podatkowych.
-                </h4>
-            </div>
-            <div id="kpir" class="kartyUslug">
-                <h2 class="tekst" id="tytul">księgi przychodów i rozchodów</h2>
-                <h4 class="tekst" id="tresc"><b>Prosta forma księgowości</b><br> dla <br> małych firm i jednoosobowych działalności, umożliwiająca rozliczanie przychodów i kosztów działalności.
-                </h4>
-            </div>
-            <div id="ep" class="kartyUslug">
-                <h2 class="tekst" id="tytul">ewidencji przychodów (ryczałt)</h2>
-                <h4 class="tekst" id="tresc"><b>Obsługa podatników rozliczających się ryczałtem ewidencjonowanym,</b> obejmująca prowadzenie ewidencji i rozliczanie należnych podatków.
-                </h4>
-            </div>
-            <hr id="k6">
-            <div id="ev" class="kartyUslug">
-                <h2 class="tekst" id="tytul">ewidencji VAT</h2>
-                <h4 class="tekst" id="tresc"><b>Prowadzenie</b> rejestrów VAT,<b>sporządzanie</b> deklaracji i plików JPK, a także <b>kontrola</b> poprawności transakcji pod kątem podatku od towarów i usług.
-                </h4>
-            </div>
-            <div id="okp" class="kartyUslug">
-                <h2 class="tekst" id="tytul">obługi kadrowo-płacowej</h2>
-                <h4 class="tekst" id="tresc"><b>Kompleksowa administracja <br> kadrowa i płacowa</b><br> Sporządzanie umów, <br> naliczanie wynagrodzeń, <br> rozliczenia z ZUS <br> oraz <br> prowadzenie akt pracowniczych.
-                </h4>
-            </div>
+
+</header>
+
+<!--Hero-->
+<section class="bg-gradient-to-br from-[#1E5A6E] to-[#0D2B45] py-10 md:py-15" id="start">
+    <div class="max-w-7xl mx-auto px-4 md:px-8 flex items-center">
+
+        <!-- tekst -->
+        <div class="max-w-xl text-[#FFF8E7] text-center md:text-left">
+
+            <h2 class="text-3xl md:text-5xl font-semibold leading-tight tracking-wide">
+                Kompleksowa księgowość dla Twojej firmy
+            </h2>
+
+            <p class="mt-6 text-base md:text-lg text-slate-100 leading-relaxed">
+                Oferujemy kompleksową obsługę księgową, podatkową i kadrową dopasowaną do potrzeb Twojej firmy.
+            </p>
+
+            <a href="#kontakt"
+                class="inline-block mt-8 bg-[#DCC8AA] text-[#0D2B45] px-6 md:px-8 py-3 rounded-lg font-semibold hover:bg-[#E8D8BE] transition">
+                Skontaktuj się z nami
+            </a>
+
         </div>
-        <!--<img src="chainBg2.png" style="top: 48%;" class="chainImg">-->
-        <h4 class="tekst" id="wspolpracaM">Współpraca</h4>
-        <hr id="k7">
-        <div class="karta" id="karta2">
-            <div id="pdpe" class="kartyUslug">
-                <h2 class="tekst" id="tytul">Przesyłanie dokumentów pocztą elektroniczną</h2>
-                <h4 class="tekst" id="tresc">Wygodna i bezpieczna forma dostarczania dokumentów księgowych za pomocą e-maila, eliminująca konieczność wizyt w biurze.
-                </h4>
-            </div>
-            <div id="zpnskk" class="kartyUslug">
-                <h2 class="tekst" id="tytul">Zdalna praca na systemach komputerowych klienta</h2>
-                <h4 class="tekst" id="tresc">Możliwość bezpośredniego księgowania i obsługi<br> dokumentacji na systemach klienta, co zapewnia bieżącą kontrolę i aktualność danych.
-                </h4>
-            </div>
-            <div id="tpzprmhdpk" class="kartyUslug">
-                <h2 class="tekst" id="tytul">Transfer plików z programu magazynowo-handlowego do programu księgowego</h2>
-                <h4 class="tekst" id="tresc">Automatyzacja procesu księgowania dzięki integracji systemów, zapewniająca szybki i dokładny przepływ danych.
-                </h4>
-            </div>
-        </div>
-        <!--<img src="chainBg2.png" style="top: 75.5%;" class="chainImg">-->
-        <h4 class="tekst" id="kontaktM2">Kontakt</h4>
-        <hr id="k8">
-        <div class="karta" id="karta3">
-            <div id="pt" class="kartyUslug">
-                <h2 class="tekst" id="tytul">Kontakt telefoniczny</h2>
-                <h4 class="tekst" id="tresc"><b style="font-size: 140%; letter-spacing: 2px;"><i style="font-size: 80%; color: rgb(192, 192, 192);">+48</i>   602 588 440</b><br>Szybka i bezpośrednia forma kontaktu w celu uzyskania informacji lub umówienia spotkania.
-                </h4>
-            </div>
-            <div id="mp" class="kartyUslug">
-                <h2 class="tekst" id="tytul">Spotkanie w biurze</h2>
-                <h4 class="tekst" id="tresc">
-                    21-500 Biała Podlaska ul. Wesoła 7a
-                    <iframe 
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d433.9871822660306!2d23.14102825791013!3d52.025056947321914!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x472190df4d167bd7%3A0xc95fda591da99b25!2sWeso%C5%82a%207A%2C%2021-500%20Bia%C5%82a%20Podlaska!5e0!3m2!1spl!2spl!4v1741695940510!5m2!1spl!2spl" 
-                        width="375" 
-                        height="300" 
-                        style="border:0;" 
-                        allowfullscreen="" 
-                        loading="lazy">
-                    </iframe>
-                </h4>
-            </div>
-            <div id="nt" class="kartyUslug">
-                <h2 class="tekst" id="tytul">Kontakt mailowy</h2>
-                <h4 class="tekst" id="tresc"><b style="font-size: 140%; letter-spacing: 2px;">br.joanat@gmail.com</b><br>Możliwość przesyłania zapytań i dokumentów drogą elektroniczną, z gwarancją sprawnej odpowiedzi.
-                </h4>
-            </div>
-        </div>
+
+
+       
+
     </div>
+
+
+
+
+
+</section>
+
+
+
+
+
+<section class="bg-[#B7D4E6] py-20" id="uslugi">
+    <div class="max-w-7xl mx-auto px-8">
+
+        <p class="uppercase tracking-[0.30em] text-sm font-semibold text-[#1E5A6E]">
+            Oferta
+        </p>
+
+        <h2 class="mt-2 text-4xl font-semibold text-[#0D2B45]">
+            Nasze usługi
+        </h2>
+
+        <p class="mt-4 text-lg text-slate-700 max-w-2xl">
+            Kompleksowa obsługa księgowa, podatkowa oraz kadrowo-płacowa
+            dopasowana do potrzeb przedsiębiorców.
+        </p>
+
+        <!-- Karty -->
+
+        <div class="mt-14 grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+
+            <!-- karta -->
+
+            <div class="bg-white rounded-2xl p-6 md:p-8 shadow-md transition duration-300 hover:-translate-y-2 hover:shadow-xl">
+
+                <h3 class="text-2xl font-semibold text-[#0D2B45]">
+                    Księgi handlowe
+                </h3>
+
+                <p class="mt-4 text-slate-600 leading-relaxed">
+                    Kompleksowe prowadzenie pełnej księgowości wraz z rozliczeniami podatkowymi,
+                    sprawozdaniami finansowymi oraz bieżącą ewidencją operacji gospodarczych.
+                </p>
+
+            </div>
+
+            <!-- karta -->
+
+            <div class="bg-white rounded-2xl p-6 md:p-8 shadow-md transition duration-300 hover:-translate-y-2 hover:shadow-xl">
+
+                <h3 class="text-2xl font-semibold text-[#0D2B45]">
+                    KPiR
+                </h3>
+
+                <p class="mt-4 text-slate-600 leading-relaxed">
+                    Obsługa podatkowej księgi przychodów i rozchodów dla małych firm
+                    oraz jednoosobowych działalności gospodarczych.
+                </p>
+
+            </div>
+            <!-- karta -->
+
+            <div class="bg-white rounded-2xl p-6 md:p-8 shadow-md transition duration-300 hover:-translate-y-2 hover:shadow-xl">
+                <h3 class="text-2xl font-semibold text-[#0D2B45]">
+                    VAT
+                </h3>
+                <p class="mt-4 text-slate-600 leading-relaxed">
+                    Prowadzenie ewidencji VAT, rozliczenia podatku od towarów i usług,
+                    przygotowywanie deklaracji VAT i plików JPK oraz doradztwo w zakresie podatku VAT.
+                    
+                </p>
+
+
+
+            </div>
+
+             <!-- karta -->
+
+            <div class="bg-white rounded-2xl p-6 md:p-8 shadow-md transition duration-300 hover:-translate-y-2 hover:shadow-xl">
+                <h3 class="text-2xl font-semibold text-[#0D2B45]">
+                    Kadry i płace
+                </h3>
+                <p class="mt-4 text-slate-600 leading-relaxed">
+                    Kompleksowa obsługa kadrowo-płacowa, w tym prowadzenie akt osobowych,
+                    naliczanie wynagrodzeń, rozliczenia z ZUS, pełna dokumentacja pracownicza oraz przygotowywanie deklaracji podatkowych.
+                </p>
+            </div>
+
+             <!-- karta -->
+
+            <div class="md:col-span-2 flex justify-center ">
+
+                <div class="bg-white rounded-2xl p-6 md:p-8 shadow-md md:max-w-lg transition duration-300 hover:-translate-y-2 hover:shadow-xl " >
+                    <h3 class="text-2xl font-semibold text-[#0D2B45]">
+                     Ryczałt
+                     </h3>
+                     <p class="mt-4 text-slate-600 leading-relaxed">
+                    Obsługa przedsiębiorców rozliczających się ryczałtem ewidencjonowanym.
+                    </p>
+
+                </div>
+
+            </div>
+        </div>
+
+
+
+
+    </div>
+
+
+</section>
+
+<section class="bg-[#84BDB6] py-20" id="wspolpraca">
+     <div class="max-w-7xl mx-auto px-8">
+
+        <p class="mt-2 text-4xl font-semibold text-[#FFF8E7]">
+            Współpraca z nami
+        </p>
+
+        <!--Karty-->
+        <div class="mt-14 grid grid-cols-1 md:grid-cols-3 gap-8">
+
+            <!--Karta-->
+            <div class="bg-white rounded-2xl p-8 shadow-md transition duration-300 hover:-translate-y-2 hover:shadow-xl">
+                <h3 class="text-2xl font-semibold text-[#0D2B45]">
+                    Przesyłanie dokumentów pocztą elektroniczną
+                </h3>
+                <p class="mt-4 text-slate-600 leading-relaxed">
+                    Wygodna i bezpieczna forma dostarczania dokumentów księgowych za pomocą e-maila, eliminująca konieczność wizyt w biurze.
+                </p>
+                
+            </div>
+
+            <!--Karta-->
+            <div class="bg-white rounded-2xl p-8 shadow-md transition duration-300 hover:-translate-y-2 hover:shadow-xl">
+               <h3 class="text-2xl font-semibold text-[#0D2B45]">
+                    Zdalna praca na systemach komputerowych klienta
+                </h3>
+                <p class="mt-4 text-slate-600 leading-relaxed">
+                    Możliwość bezpośredniego księgowania i obsługi
+                    dokumentacji na systemach klienta, co zapewnia bieżącą kontrolę i aktualność danych.
+                </p>
+                
+            </div>
+
+            <!--Karta-->
+            <div class="bg-white rounded-2xl p-8 shadow-md transition duration-300 hover:-translate-y-2 hover:shadow-xl">
+                <h3 class="text-2xl font-semibold text-[#0D2B45]">
+                    Transfer plików z programu magazynowo-handlowego do programu księgowego
+                </h3>
+                <p class="mt-4 text-slate-600 leading-relaxed">
+                    Automatyzacja procesu księgowania dzięki integracji systemów, zapewniająca szybki i dokładny przepływ danych.
+                </p>
+                
+            </div>
+
+         </div>
+    </div>
+
+
+
+
+
+
+</section>
+
+
+
+<section class="bg-slate-90 py-30 " id="kontakt">
+    <div class="max-w-7xl mx-auto px-8"> 
+        <h3 class="mt-2 text-4xl font-semibold text-[#0D2B45]">
+            Masz pytania? Skontaktuj się z nami
+        </h3>
+            
+        <div class="mt-14 grid grid-cols-2 gap-16">
+            <!--Lewa strona - miejsce na informacje kontaktowe-->
+            <div>
+
+                <p class="uppercase tracking-[0.25em] text-sm text-[#1E5A6E] font-semibold">
+                    BR Joanat
+                </p>
+
+                <div class="mt-6 space-y-4 text-slate-700">
+
+                    <p>
+                        ul. Wesoła 7A<br>
+                        21-500 Biała Podlaska
+                    </p>
+
+                    <a href="tel:+48602588440" class="flex items-center gap-3 text-slate-700 hover:text-[#1E5A6E] transition">
+                        <i data-lucide="phone" class="w-5 h-5"></i>
+                        +48 602 588 440<br>
+                    </a>
+
+                    <a href="mailto:br.joanat@gmail.com"  class="flex items-center gap-3 text-slate-700 hover:text-[#1E5A6E] transition">
+                        <i data-lucide="mail" class="w-5 h-5"></i>
+                        br.joanat@gmail.com
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- Prawa strona | mapa-->
+
+            <div>
+
+                <iframe class="rounded-2xl w-full aspect-square md:aspect-video" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2455.0061871150647!2d23.139320376032!3d52.024984971935645!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x472190df4d167bd7%3A0xc95fda591da99b25!2sWeso%C5%82a%207A%2C%2021-500%20Bia%C5%82a%20Podlaska!5e0!3m2!1spl!2spl!4v1784448885503!5m2!1spl!2spl" 
+                 style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin">
+
+                </iframe>
+
+            </div>
+
+        </div>
+        </div>
+
+    </div>
+
+
+</section>
+
+<footer class="bg-[#081C2C] py-8">
+
+    <div class="max-w-7xl mx-auto px-8 text-center">
+
+        <p class="text-[#DCC8AA] text-lg tracking-wider"
+           style="font-family: 'Cormorant Garamond', serif;">
+            JOANAT
+        </p>
+
+        <p class="mt-2 text-slate-300 text-sm">
+            © 2026 Joanat Biuro Rachunkowe. Wszelkie prawa zastrzeżone.
+        </p>
+
+    </div>
+
+</footer>
+
+<script>
+    lucide.createIcons();
+</script>
+
+
+<script>
+    const button = document.getElementById("menu-button");
+    const menu = document.getElementById("mobile-menu");
+
+    button.addEventListener("click", () => {
+        menu.classList.toggle("opacity-0");
+        menu.classList.toggle("-translate-y-4");
+        menu.classList.toggle("pointer-events-none");
+    });
+</script>
+
+
 </body>
 </html>
